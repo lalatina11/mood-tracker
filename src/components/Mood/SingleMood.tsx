@@ -1,7 +1,6 @@
 import { formatDate, moodOption } from "@/lib";
 import { emojiOption as emoji, emojiOption } from "@/lib/emoji";
 import { useMoodStore } from "@/lib/stores/zustands";
-import { type Mood as MoodType } from "@/types";
 import { Avatar } from "@radix-ui/react-avatar";
 import { ChevronDownIcon } from "lucide-react";
 import { useState, type FormEventHandler } from "react";
@@ -21,9 +20,10 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel,
 import { Label } from "../ui/label";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 import { Textarea } from "../ui/textarea";
+import type { Mood } from "@/types";
 
 interface Props {
-    mood: MoodType
+    mood: Mood
 }
 const SingleMood = (props: Props) => {
     const { mood } = props
@@ -51,7 +51,7 @@ const SingleMood = (props: Props) => {
             return toast.error("Failed to add mood!")
 
         }
-        const newMood: MoodType = {
+        const newMood: Mood = {
             ...formState.value,
             id: mood.id,
             rate: Number(formState.value.rate),
