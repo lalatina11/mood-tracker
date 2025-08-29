@@ -2,7 +2,7 @@
 
 A simple, collaborative, and anonymous mood tracking application built for the Cazh Developer frontend assessment.
 
-![Mood Tracker App](https://user-images.githubusercontent.com/4219212/202843453-5e73f2b5-7c4b-4f7d-9a9c-4d7c0b5bcf1c.png)
+![Mood Tracker App](public/logo.svg)
 
 ## Features
 
